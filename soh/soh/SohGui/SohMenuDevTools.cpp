@@ -18,11 +18,7 @@ static const std::map<int32_t, const char*> logLevels = {
     { DEBUG_LOG_OFF, "Off" },
 };
 
-#ifdef _DEBUG
-DebugLogOption defaultLogLevel = DEBUG_LOG_TRACE;
-#else
 DebugLogOption defaultLogLevel = DEBUG_LOG_INFO;
-#endif
 
 static const std::map<int32_t, const char*> debugSaveFileModes = {
     { 0, "Off" },

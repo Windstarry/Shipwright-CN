@@ -793,15 +793,18 @@ void OTRGlobals::Initialize() {
         OOT_NTSC_JP_GC, OOT_NTSC_US_GC, OOT_PAL_GC,     OOT_PAL_GC_DBG1,   OOT_PAL_GC_DBG2,
     };
 
-#if (_DEBUG)
-    auto defaultLogLevel = spdlog::level::trace;
-#else
+    // Default to info even in Debug builds: ResourceManager trace spam (alt/* + .meta probes)
+    // fills Ship of Harkinian.log and is not useful on PortMaster/aarch64. Raise to Trace only
+    // from Dev Tools -> Log Level when actively debugging.
     auto defaultLogLevel = spdlog::level::info;
-#endif
     context->InitConfiguration();
     context->InitConsoleVariables();
     auto logLevel =
         static_cast<spdlog::level::level_enum>(CVarGetInteger(CVAR_DEVELOPER_TOOLS("LogLevel"), defaultLogLevel));
+    // Never persist/apply below Info unless explicitly set to Warn/Error/...; clamp accidental Trace.
+    if (logLevel < spdlog::level::info) {
+        logLevel = spdlog::level::info;
+    }
     context->InitLogging(logLevel, logLevel);
     Ship::Context::GetInstance()->GetLogger()->set_pattern("[%H:%M:%S.%e] [%s:%#] [%l] %v");
 
