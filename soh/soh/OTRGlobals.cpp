@@ -307,19 +307,32 @@ OTRGlobals::OTRGlobals() {
     if (sohArchiveVersionMatch) {
 
         auto overlay = context->GetInstance()->GetWindow()->GetGui()->GetGameOverlay();
+        // Game overlay fonts stay free of CJK merges so in-game HUD text keeps its own look.
         overlay->LoadFont("Press Start 2P", 12.0f, "fonts/PressStart2P-Regular.ttf");
         overlay->LoadFont("Fipps", 32.0f, "fonts/Fipps-Regular.otf");
         overlay->SetCurrentFont(CVarGetString(CVAR_GAME_OVERLAY_FONT, "Press Start 2P"));
 
-        fontMonoSmall = CreateFontWithSize(14.0f, "fonts/Inconsolata-Regular.ttf", false, true);
-        fontMono = CreateFontWithSize(16.0f, "fonts/Inconsolata-Regular.ttf", false, true);
-        fontMonoLarger = CreateFontWithSize(20.0f, "fonts/Inconsolata-Regular.ttf", false, true);
-        fontMonoLargest = CreateFontWithSize(24.0f, "fonts/Inconsolata-Regular.ttf", false, true);
+        // Mono fonts: no CJK merge (code/stats/debug) — keeps in-game debug text distinct from the menu.
+        fontMonoSmall = CreateFontWithSize(14.0f, "fonts/Inconsolata-Regular.ttf", false, false);
+        fontMono = CreateFontWithSize(16.0f, "fonts/Inconsolata-Regular.ttf", false, false);
+        fontMonoLarger = CreateFontWithSize(20.0f, "fonts/Inconsolata-Regular.ttf", false, false);
+        fontMonoLargest = CreateFontWithSize(24.0f, "fonts/Inconsolata-Regular.ttf", false, false);
+        // Standard fonts: CJK merge only here (ImGui menu / port UI). Do not merge into every font —
+        // a full CJK atlas per size overflows GLES texture limits (especially aarch64/PortMaster)
+        // and can leave the menu blank while game text appears to share the menu face.
         fontStandard = CreateFontWithSize(16.0f, "fonts/Montserrat-Regular.ttf", false, true);
         fontStandardLarger = CreateFontWithSize(20.0f, "fonts/Montserrat-Regular.ttf", false, true);
         fontStandardLargest = CreateFontWithSize(24.0f, "fonts/Montserrat-Regular.ttf", false, true);
-        fontJapanese = CreateFontWithSize(24.0f, "fonts/NotoSansJP-Regular.ttf", true);
-        ImGui::GetIO().FontDefault = fontStandardLarger;
+        fontJapanese = CreateFontWithSize(24.0f, "fonts/NotoSansJP-Regular.ttf", true, false);
+        // Prefer the larger UI font as default; fall back so the menu can still draw if one load failed.
+        if (fontStandardLarger != nullptr) {
+            ImGui::GetIO().FontDefault = fontStandardLarger;
+        } else if (fontStandard != nullptr) {
+            ImGui::GetIO().FontDefault = fontStandard;
+        }
+        if (fontStandardLargest == nullptr) {
+            fontStandardLargest = fontStandardLarger != nullptr ? fontStandardLarger : fontStandard;
+        }
     }
 
     previousImGuiScaleIndex = -1;

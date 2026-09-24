@@ -583,7 +583,16 @@ void Menu::Draw() {
 
 static bool freshOpen = true;
 void Menu::DrawElement() {
-    if (OTRGlobals::Instance->fontStandardLargest == nullptr) {
+    // Do not hard-require fontStandardLargest: on GLES/aarch64 a failed CJK merge used to leave it
+    // null and the menu drew as an empty overlay after Select/Esc. Fall back so content still shows.
+    ImFont* titleFont = OTRGlobals::Instance->fontStandardLargest;
+    if (titleFont == nullptr) {
+        titleFont = OTRGlobals::Instance->fontStandardLarger;
+    }
+    if (titleFont == nullptr) {
+        titleFont = OTRGlobals::Instance->fontStandard;
+    }
+    if (titleFont == nullptr) {
         return;
     }
     for (auto& [reason, info] : disabledMap) {
@@ -668,7 +677,7 @@ void Menu::DrawElement() {
     windowHeight = window->WorkRect.GetHeight();
     windowWidth = window->WorkRect.GetWidth();
 
-    ImGui::PushFont(OTRGlobals::Instance->fontStandardLargest);
+    ImGui::PushFont(titleFont);
     ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(10.0f, 8.0f));
     std::string headerIndex = CVarGetString(headerCvar, "Settings");
     ImVec2 pos = window->DC.CursorPos;
@@ -901,7 +910,12 @@ void Menu::DrawElement() {
     }
     if (headerSearch && menuSearchText.length() > 0) {
         ImGui::AlignTextToFramePadding();
-        ImGui::PushFont(OTRGlobals::Instance->fontMonoLargest);
+        ImFont* searchFont = OTRGlobals::Instance->fontMonoLargest;
+        if (searchFont == nullptr) {
+            searchFont = OTRGlobals::Instance->fontMonoLarger != nullptr ? OTRGlobals::Instance->fontMonoLarger
+                                                                        : titleFont;
+        }
+        ImGui::PushFont(searchFont);
         ImGui::Text("%s", SohGui::L("Search Results"));
         ImGui::PopFont();
         ImGui::SameLine();

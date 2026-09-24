@@ -110,10 +110,11 @@ std::shared_ptr<SohMenu> GetSohMenu() {
 
 void SetupMenu() {
     auto gui = Ship::Context::GetInstance()->GetWindow()->GetGui();
-    mSohMenu = std::make_shared<SohMenu>(CVAR_WINDOW("Menu"), SohGui::L("Port Menu"));
+    // Keep English names: they are GuiWindow map keys (GetGuiWindow). Display labels use SohGui::L().
+    mSohMenu = std::make_shared<SohMenu>(CVAR_WINDOW("Menu"), "Port Menu");
     gui->SetMenu(mSohMenu);
 
-    mModalWindow = std::make_shared<SohModalWindow>(CVAR_WINDOW("ModalWindow"), SohGui::L("Modal Window"));
+    mModalWindow = std::make_shared<SohModalWindow>(CVAR_WINDOW("ModalWindow"), "Modal Window");
     gui->AddGuiWindow(mModalWindow);
     mModalWindow->Show();
 }
