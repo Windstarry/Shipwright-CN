@@ -188,7 +188,7 @@ void DrawSectionCheck(const std::string& name, bool empty, bool* pointer, std::s
         UIWidgets::PopStyleButton();
         ImGui::PopStyleColor();
     } else {
-        ImGui::PushFont(OTRGlobals::Instance->fontMono);
+        ImGui::PushFont(OTRGlobals::Instance->GetLocalizableFont(OTRGlobals::Instance->fontMono, OTRGlobals::Instance->fontStandard));
         ImGui::SetCursorPosY(ImGui::GetCursorPosY() + (ImGui::GetStyle().FramePadding.y));
         UIWidgets::Checkbox(("##" + name + section).c_str(), pointer,
                             { .defaultValue = true, .padding = { 6.0f, 6.0f }, .color = THEME_COLOR });
@@ -360,7 +360,7 @@ void DrawNewPresetPopup() {
 }
 
 void PresetsCustomWidget(WidgetInfo& info) {
-    ImGui::PushFont(OTRGlobals::Instance->fontMonoLarger);
+    ImGui::PushFont(OTRGlobals::Instance->GetLocalizableFont(OTRGlobals::Instance->fontMonoLarger, OTRGlobals::Instance->fontStandardLarger));
     if (UIWidgets::Button("New Preset", UIWidgets::ButtonOptions(
                                             { { .disabled = (CVarGetInteger(CVAR_SETTING("DisableChanges"), 0) != 0),
                                                 .disabledTooltip = "Disabled because of race lockout" } })

@@ -910,10 +910,15 @@ void Menu::DrawElement() {
     }
     if (headerSearch && menuSearchText.length() > 0) {
         ImGui::AlignTextToFramePadding();
-        ImFont* searchFont = OTRGlobals::Instance->fontMonoLargest;
+        ImFont* searchFont =
+            OTRGlobals::Instance->GetLocalizableFont(OTRGlobals::Instance->fontMonoLargest,
+                                                     OTRGlobals::Instance->fontStandardLargest);
         if (searchFont == nullptr) {
-            searchFont = OTRGlobals::Instance->fontMonoLarger != nullptr ? OTRGlobals::Instance->fontMonoLarger
-                                                                        : titleFont;
+            searchFont = OTRGlobals::Instance->GetLocalizableFont(OTRGlobals::Instance->fontMonoLarger,
+                                                                  OTRGlobals::Instance->fontStandardLarger);
+        }
+        if (searchFont == nullptr) {
+            searchFont = titleFont;
         }
         ImGui::PushFont(searchFont);
         ImGui::Text("%s", SohGui::L("Search Results"));

@@ -664,7 +664,7 @@ void DrawGameplayStatsOptionsTab() {
 }
 
 void GameplayStatsWindow::DrawElement() {
-    ImGui::PushFont(OTRGlobals::Instance->fontMonoLarger);
+    ImGui::PushFont(OTRGlobals::Instance->GetLocalizableFont(OTRGlobals::Instance->fontMonoLarger, OTRGlobals::Instance->fontStandardLarger));
     DrawGameplayStatsHeader();
 
     UIWidgets::PushStyleTabs(THEME_COLOR);

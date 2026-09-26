@@ -67,6 +67,10 @@ class OTRGlobals {
     ImFont* fontMonoLargest = nullptr;
     ImFont* fontJapanese = nullptr;
 
+    // Mono faces skip the CJK merge (GLES atlas budget). When the menu language is Chinese,
+    // UI windows that can show translated text must call this instead of PushFont(mono*).
+    ImFont* GetLocalizableFont(ImFont* mono, ImFont* standard);
+
     OTRGlobals();
     ~OTRGlobals();
 

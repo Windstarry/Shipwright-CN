@@ -340,6 +340,13 @@ OTRGlobals::OTRGlobals() {
     ScaleImGui();
 }
 
+ImFont* OTRGlobals::GetLocalizableFont(ImFont* mono, ImFont* standard) {
+    if (SohGui::IsMenuChinese()) {
+        return standard != nullptr ? standard : mono;
+    }
+    return mono != nullptr ? mono : standard;
+}
+
 typedef enum ExtractSteps {
     ES_PORT_ARCHIVE,
     ES_WINDOWS,

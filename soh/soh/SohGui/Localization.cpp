@@ -7283,6 +7283,155 @@ static const std::unordered_map<std::string, std::string> gChineseTable = {
     { "Top Right", "右上" },
     { "Bottom Left", "左下" },
     { "Bottom Right", "右下" },
+
+    // ---- Additional menu strings (port pass) ----
+    { "This setting is disabled because a randomizer savefile with \"Jabu-Jabu: Open\" is loaded.", "当前随机存档启用了「贾布贾布：开启」，此设置已禁用。" },  // SohMenuEnhancements.cpp
+    { "This setting is disabled because a randomizer savefile is loaded. Please use the \"Skip Get Item Animation\" option within the randomizer enhancements instead.", "已载入随机存档，此设置禁用。请改用随机增强中的「跳过获得道具动画」。" },  // SohMenuEnhancements.cpp
+    { "This setting is forcefully enabled when Mask Quest is Completed from the start or Shuffled", "当面具任务开局完成或被随机时，此设置强制开启" },  // SohMenuEnhancements.cpp
+    { "This setting is forcefully enabled when you are playing a randomizer.", "游玩随机模式时此设置强制开启。" },  // SohMenuEnhancements.cpp
+    { "Forces Goron City doors open if you somehow complete Fire Temple without talking to Goron Link  and receiving the Goron Tunic.", "若未与鼓隆林克对话获得鼓隆衣就通关火之神殿，强制打开鼓隆城大门。" },  // SohMenuEnhancements.cpp
+    { " WARNING ", " 警告 " },  // SohMenuEnhancements.cpp
+    { "\nTHIS IS NOT REVERSIBLE!\nUSE AT YOUR OWN RISK!", "\n此操作不可逆！\n风险自负！" },  // SohMenuEnhancements.cpp
+    { " WARNING!!!! ", " 警告！！！！ " },  // SohMenuEnhancements.cpp
+    { " The Network features are unavailable because SoH was compiled without network support (\"ENABLE_REMOTE_CONTROL\" build flag).", " 网络功能不可用：当前 SoH 编译时未启用网络支持（\"ENABLE_REMOTE_CONTROL\" 编译标志）。" },  // SohMenuNetwork.cpp
+    { "Must be on File Select to generate a randomizer seed.", "必须在文件选择画面才能生成随机种子。" },  // SohMenuRandomizer.cpp
+    { "This slider only applies when using the \"Skip Get Item Animations\" option.", "此滑条仅在启用「跳过获得道具动画」时生效。" },  // SohMenuRandomizer.cpp
+    { "Search Results Col 1", "搜索结果第 1 列" },  // Menu.cpp
+    { "  ({} -> {}, Col {})", "  ({} → {}，列 {})" },  // Menu.cpp
+    { "\n- Race Lockout Active", "\n- 竞速锁定已激活" },  // Menu.cpp
+    { "Main Menu", "主菜单" },  // Menu.cpp
+    { "Menu Block", "菜单区块" },  // Menu.cpp
+    { "Header Selection", "标题栏选择" },  // Menu.cpp
+    { " (Command-R)", " (Command-R)" },  // Menu.cpp
+    { " (Ctrl+R)", " (Ctrl+R)" },  // Menu.cpp
+    { " Section", " 分区" },  // Menu.cpp
+    { " Settings", " 设置" },  // Menu.cpp
+    { "{} Column {}", "{} 第 {} 列" },  // Menu.cpp
+    { " \"Force aspect ratio\" required.", " 需要启用「强制宽高比」。" },  // ResolutionEditor.cpp
+    { " Window exceeded.", " 已超出窗口。" },  // ResolutionEditor.cpp
+    { "Disable aspect correction and stretch the output image.\n(Might be useful for 4:3 televisions!)\nNot available in Pixel Perfect Mode.", "禁用宽高比校正并拉伸输出画面。\n（适合 4:3 电视！）\n像素完美模式下不可用。" },  // ResolutionEditor.cpp
+    { " If the image is stretched and you don't know why, click this.", " 若画面被拉伸且原因不明，点此。" },  // ResolutionEditor.cpp
+    { "Exceed Bounds By", " 允许超出边界" },  // ResolutionEditor.cpp
+    { "crop overscan", "裁切过扫描" },  // ResolutionEditor.cpp
+    { " A scroll bar may become visible if screen bounds are exceeded.", " 超出屏幕边界时可能出现滚动条。" },  // ResolutionEditor.cpp
+    { " Significant frame rate (FPS) drops may be occuring.", " 可能出现明显的帧率下降。" },  // ResolutionEditor.cpp
+    { " \"N64 Mode\" is overriding these settings.", " 「N64 模式」正在覆盖这些设置。" },  // ResolutionEditor.cpp
+    { "Kokiri Sword Hilt", "科奇里剑柄" },  // CosmeticsEditor.cpp
+    { "Master Sword Hilt", "大师剑柄" },  // CosmeticsEditor.cpp
+    { "Biggoron Sword Hilt", "比格隆剑柄" },  // CosmeticsEditor.cpp
+    { "Slingshot Body", "弹弓枪身" },  // CosmeticsEditor.cpp
+    { "Hookshot Tip", "钩索尖端" },  // CosmeticsEditor.cpp
+    { "Chest Game Key", "宝箱游戏钥匙" },  // CosmeticsEditor.cpp
+    { "Chest Game Key Emblem", "宝箱游戏钥匙徽章" },  // CosmeticsEditor.cpp
+    { "Title Fire Primary", "标题火焰主色" },  // CosmeticsEditor.cpp
+    { "Title Fire Secondary", "标题火焰副色" },  // CosmeticsEditor.cpp
+    { " use margins", " 使用边距" },  // CosmeticsEditor.cpp
+    { "Scale : %dx", "缩放：%dx" },  // CosmeticsEditor.cpp
+    { "Set most of the elements to use margins\nSome elements with default position will not be affected\nElements without Anchor or Hidden will not be turned on", "让多数元素使用边距\n默认位置的部分元素不受影响\n无锚点或隐藏的元素不会被开启" },  // CosmeticsEditor.cpp
+    { "Set all of the elements to not use margins", "让全部元素不使用边距" },  // CosmeticsEditor.cpp
+    { "Hearts counts settings", "红心计数设置" },  // CosmeticsEditor.cpp
+    { "Hearts counts", "红心计数" },  // CosmeticsEditor.cpp
+    { "Magic meter settings", "魔力槽设置" },  // CosmeticsEditor.cpp
+    { "Magic meter", "魔力槽" },  // CosmeticsEditor.cpp
+    { "Visual stone of agony settings", "痛苦之石视觉设置" },  // CosmeticsEditor.cpp
+    { "Visual stone of agony", "痛苦之石视觉" },  // CosmeticsEditor.cpp
+    { "B Button settings", "B 键设置" },  // CosmeticsEditor.cpp
+    { "A Button settings", "A 键设置" },  // CosmeticsEditor.cpp
+    { "Start Button settings", "Start 键设置" },  // CosmeticsEditor.cpp
+    { "C Button Up settings", "C 上键设置" },  // CosmeticsEditor.cpp
+    { "C Button Up", "C 上键" },  // CosmeticsEditor.cpp
+    { "C Button Down settings", "C 下键设置" },  // CosmeticsEditor.cpp
+    { "C Button Down", "C 下键" },  // CosmeticsEditor.cpp
+    { "C Button Left settings", "C 左键设置" },  // CosmeticsEditor.cpp
+    { "C Button Left", "C 左键" },  // CosmeticsEditor.cpp
+    { "C Button Right settings", "C 右键设置" },  // CosmeticsEditor.cpp
+    { "C Button Right", "C 右键" },  // CosmeticsEditor.cpp
+    { "DPad items settings", "方向键道具设置" },  // CosmeticsEditor.cpp
+    { "DPad items", "方向键道具" },  // CosmeticsEditor.cpp
+    { "minimaps settings", "小地图设置" },  // CosmeticsEditor.cpp
+    { "Small Keys counter settings", "小钥匙计数设置" },  // CosmeticsEditor.cpp
+    { "Small Keys counter", "小钥匙计数" },  // CosmeticsEditor.cpp
+    { "Rupee counter settings", "卢比计数设置" },  // CosmeticsEditor.cpp
+    { "Rupee counter", "卢比计数" },  // CosmeticsEditor.cpp
+    { "Carrots settings", "胡萝卜设置" },  // CosmeticsEditor.cpp
+    { "Timers settings", "计时器设置" },  // CosmeticsEditor.cpp
+    { "Archery Scores settings", "射箭分数设置" },  // CosmeticsEditor.cpp
+    { "Archery scores", "射箭分数" },  // CosmeticsEditor.cpp
+    { "Titlecard maps settings", "地名标题地图设置" },  // CosmeticsEditor.cpp
+    { "Title cards (overworld)", "地名标题（地上）" },  // CosmeticsEditor.cpp
+    { "Title cards (Bosses) settings", "Boss 标题设置" },  // CosmeticsEditor.cpp
+    { "Title cards (Bosses)", "Boss 标题" },  // CosmeticsEditor.cpp
+    { "In-game Gameplay Timer settings", "游戏内计时器设置" },  // CosmeticsEditor.cpp
+    { "In-game Gameplay Timer", "游戏内计时器" },  // CosmeticsEditor.cpp
+    { "Enemy Health Bar settings", "敌人血条设置" },  // CosmeticsEditor.cpp
+    { "Token Table", "徽章表" },  // TimeSplits.cpp
+    { "Item Image", "道具图片" },  // TimeSplits.cpp
+    { "Item Child", "道具（小孩）" },  // TimeSplits.cpp
+    { "Item List", "道具列表" },  // TimeSplits.cpp
+    { "List Management", "列表管理" },  // TimeSplits.cpp
+    { "List Preview", "列表预览" },  // TimeSplits.cpp
+    { "List Options", "列表选项" },  // TimeSplits.cpp
+    { "Split Tabs", "分段标签页" },  // TimeSplits.cpp
+    { "Timer List", "计时器列表" },  // TimeDisplay.cpp
+    { "Currently editing...", "正在编辑……" },  // mod_menu.cpp
+    { "Clear the current mod list and force a rebuild on next boot.\nClick Apply & Close to save this change.", "清空当前 MOD 列表并在下次启动时强制重建。\n点击「应用并关闭」以保存。" },  // mod_menu.cpp
+    { "Application currently requires a restart. Save the mod info and close SoH?", "程序需要重启。保存 MOD 信息并关闭 SoH 吗？" },  // mod_menu.cpp
+    { "Disabled Mods", "已禁用的 MOD" },  // mod_menu.cpp
+    { "Temporarily disabled while editing mods list.", "编辑 MOD 列表期间暂时禁用。" },  // mod_menu.cpp
+    { "alternate assets", "替代资源" },  // mod_menu.cpp
+    { "alternate assets tab hotkey", "替代资源页签快捷键" },  // mod_menu.cpp
+    { "D-pad up", "方向键上" },  // SohInputEditorWindow.cpp
+    { "D-pad down", "方向键下" },  // SohInputEditorWindow.cpp
+    { "D-pad left", "方向键左" },  // SohInputEditorWindow.cpp
+    { "D-pad right", "方向键右" },  // SohInputEditorWindow.cpp
+    { "Reset to Default###resetStickSensitivity%d", "重置为默认###resetStickSensitivity%d" },  // SohInputEditorWindow.cpp
+    { "Reset to Default###resetStickDeadzone%d", "重置为默认###resetStickDeadzone%d" },  // SohInputEditorWindow.cpp
+    { "Reset to Default###resetStickSnap%d", "重置为默认###resetStickSnap%d" },  // SohInputEditorWindow.cpp
+    { "Reset to Default###resetHighFrequencyIntensity%s", "重置为默认###resetHighFrequencyIntensity%s" },  // SohInputEditorWindow.cpp
+    { "Reset to Default###resetLowFrequencyIntensity%s", "重置为默认###resetLowFrequencyIntensity%s" },  // SohInputEditorWindow.cpp
+    { "Original Tunic Colors", "原版束衣颜色" },  // SohInputEditorWindow.cpp
+    { "Cosmetics Tunic Colors", "外观编辑器束衣颜色" },  // SohInputEditorWindow.cpp
+    { "Health Colors", "生命值颜色" },  // SohInputEditorWindow.cpp
+    { "Original Navi Targeting Colors", "原版娜薇瞄准颜色" },  // SohInputEditorWindow.cpp
+    { "Cosmetics Navi Targeting Colors", "外观编辑器娜薇瞄准颜色" },  // SohInputEditorWindow.cpp
+    { "Shows red color when health is critical, otherwise displays according to color source.", "生命危急时显示红色，否则按颜色来源显示。" },  // SohInputEditorWindow.cpp
+    { "Reset to Default", "重置为默认" },  // SohInputEditorWindow.cpp
+    { "Aiming/First-Person Horizontal Sensitivity: %.0f %%", "瞄准/第一人称水平灵敏度：%.0f %%" },  // SohInputEditorWindow.cpp
+    { "Dpad Controls", "方向键控制" },  // SohInputEditorWindow.cpp
+    { "Outline Always Shown", "轮廓始终显示" },  // InputViewer.cpp
+    { "Outline Shown Only While Not Pressed", "仅未按下时显示轮廓" },  // InputViewer.cpp
+    { "Outline Shown Only While Pressed", "仅按下时显示轮廓" },  // InputViewer.cpp
+    { "Outline Always Hidden", "轮廓始终隐藏" },  // InputViewer.cpp
+    { "A-Btn Outline", "A 键轮廓" },  // InputViewer.cpp
+    { "B-Btn Outline", "B 键轮廓" },  // InputViewer.cpp
+    { "L-Btn Outline", "L 键轮廓" },  // InputViewer.cpp
+    { "R-Btn Outline", "R 键轮廓" },  // InputViewer.cpp
+    { "Z-Btn Outline", "Z 键轮廓" },  // InputViewer.cpp
+    { "Start-Btn Outline", "Start 键轮廓" },  // InputViewer.cpp
+    { "C-Left Outline", "C 左键轮廓" },  // InputViewer.cpp
+    { "C-Right Outline", "C 右键轮廓" },  // InputViewer.cpp
+    { "C-Up Outline", "C 上键轮廓" },  // InputViewer.cpp
+    { "C-Down Outline", "C 下键轮廓" },  // InputViewer.cpp
+    { "Analog-Stick Outline", "摇杆轮廓" },  // InputViewer.cpp
+    { "Dpad-Left Outline", "方向左轮廓" },  // InputViewer.cpp
+    { "Dpad-Right Outline", "方向右轮廓" },  // InputViewer.cpp
+    { "Dpad-Up Outline", "方向上轮廓" },  // InputViewer.cpp
+    { "Dpad-Down Outline", "方向下轮廓" },  // InputViewer.cpp
+    { "Modifier-1 Outline", "改键 1 轮廓" },  // InputViewer.cpp
+    { "Modifier-2 Outline", "改键 2 轮廓" },  // InputViewer.cpp
+    { "Right-Stick Outline", "右摇杆轮廓" },  // InputViewer.cpp
+    { "Disabled because Global Button Outline is off", "因全局按钮轮廓已关闭而禁用" },  // InputViewer.cpp
+    { "Angle Text Scale: %.2f%%", "角度文字缩放：%.2f%%" },  // InputViewer.cpp
+    { "Angle Text Offset: %dpx", "角度文字偏移：%dpx" },  // InputViewer.cpp
+    { "Highlight ESS Position", "高亮 ESS 位置" },  // InputViewer.cpp
+    { "ESS Color", "ESS 颜色" },  // InputViewer.cpp
+    { "Walking Speed Color", "行走速度颜色" },  // InputViewer.cpp
+    { "Attempted to load file {} as a preset, but was not a preset file.", "尝试将 {} 作为预设载入，但该文件不是预设文件。" },  // Presets.cpp
+    { "presets/*", "presets/*" },  // Presets.cpp
+    { "Preset name already exists", "预设名称已存在" },  // Presets.cpp
+    { "Preset name is empty", "预设名称为空" },  // Presets.cpp
+    { "No sections selected", "未选择任何分区" },  // Presets.cpp
+    { "Save {}", "保存 {}" },  // Presets.cpp
 };
 
 const char* L(const char* english) {

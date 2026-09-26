@@ -1813,7 +1813,7 @@ void ItemTrackerWindow::Draw() {
     if (!IsVisible()) {
         return;
     }
-    ImGui::PushFont(OTRGlobals::Instance->fontMono);
+    ImGui::PushFont(OTRGlobals::Instance->GetLocalizableFont(OTRGlobals::Instance->fontMono, OTRGlobals::Instance->fontStandard));
     DrawElement();
     // Sync up the IsVisible flag if it was changed by ImGui
     SyncVisibilityConsoleVariable();
