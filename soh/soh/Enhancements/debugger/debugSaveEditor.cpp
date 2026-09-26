@@ -1925,7 +1925,7 @@ void ResetBaseOptions() {
 
 void SaveEditorWindow::DrawElement() {
     PushStyleTabs(THEME_COLOR);
-    ImGui::PushFont(OTRGlobals::Instance->fontMonoLarger);
+    ImGui::PushFont(OTRGlobals::Instance->GetLocalizableFont(OTRGlobals::Instance->fontMonoLarger, OTRGlobals::Instance->fontStandardLarger));
     ImGui::BeginDisabled(CVarGetInteger(CVAR_SETTING("DisableChanges"), 0));
 
     if (ImGui::BeginTabBar("SaveContextTabBar", ImGuiTabBarFlags_NoCloseWithMiddleMouseButton)) {

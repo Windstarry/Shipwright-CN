@@ -7432,6 +7432,15 @@ static const std::unordered_map<std::string, std::string> gChineseTable = {
     { "Preset name is empty", "预设名称为空" },  // Presets.cpp
     { "No sections selected", "未选择任何分区" },  // Presets.cpp
     { "Save {}", "保存 {}" },  // Presets.cpp
+
+    // ---- Debugger windows ----
+    { "Catch All (Child)", "全部捕获（小孩）" },  // debugSaveEditor.cpp
+    { "Uncatch All (Child)", "全部取消捕获（小孩）" },  // debugSaveEditor.cpp
+    { "Catch All (Adult)", "全部捕获（成人）" },  // debugSaveEditor.cpp
+    { "Uncatch All (Adult)", "全部取消捕获（成人）" },  // debugSaveEditor.cpp
+    { "Global Context needed for player info!", "玩家信息需要全局上下文！" },  // debugSaveEditor.cpp
+    { "Resource type is not a Display List. Please choose another.", "资源类型不是显示列表，请另选。" },  // dlViewer.cpp
+    { "Error displaying DL instructions.", "显示列表指令显示出错。" },  // dlViewer.cpp
 };
 
 const char* L(const char* english) {

@@ -93,7 +93,7 @@ void DLViewerWindow::DrawElement() {
     ImGui::BeginDisabled(CVarGetInteger(CVAR_SETTING("DisableChanges"), 0));
     // Debounce the search field as listing otr files is expensive
     UIWidgets::PushStyleInput(THEME_COLOR);
-    ImGui::PushFont(OTRGlobals::Instance->fontMonoLarger);
+    ImGui::PushFont(OTRGlobals::Instance->GetLocalizableFont(OTRGlobals::Instance->fontMonoLarger, OTRGlobals::Instance->fontStandardLarger));
 
     if (ImGui::InputText(SohGui::L("Search Display Lists"), searchString, ARRAY_COUNT(searchString))) {
         doSearch = true;
