@@ -7441,6 +7441,58 @@ static const std::unordered_map<std::string, std::string> gChineseTable = {
     { "Global Context needed for player info!", "玩家信息需要全局上下文！" },  // debugSaveEditor.cpp
     { "Resource type is not a Display List. Please choose another.", "资源类型不是显示列表，请另选。" },  // dlViewer.cpp
     { "Error displaying DL instructions.", "显示列表指令显示出错。" },  // dlViewer.cpp
+
+    // ---- Check tracker areas & chrome ----
+    { "???", "？？？" },  // check tracker spoiler placeholder
+    { "?", "?" },  // help marker
+    { "Available / ", "可用 / " },  // check tracker tooltip
+    { "Checked / Total", "已检查 / 总计" },  // check tracker tooltip
+    { "Window", "窗口" },  // tracker window type
+    { "B Button", "B 键" },  // combo button
+    { "C-Up", "C 上" },  // combo button
+    { "C-Down", "C 下" },  // combo button
+    { "C-Left", "C 左" },  // combo button
+    { "C-Right", "C 右" },  // combo button
+    { "L Button", "L 键" },  // combo button
+    { "Z Button", "Z 键" },  // combo button
+    { "R Button", "R 键" },  // combo button
+    { "Start", "Start" },  // combo button
+    { "D-Up", "方向上" },  // combo button
+    { "D-Down", "方向下" },  // combo button
+    { "D-Left", "方向左" },  // combo button
+    { "D-Right", "方向右" },  // combo button
+    { "Kokiri Forest", "科奇里森林" },  // rc area
+    { "Lost Woods", "迷失森林" },  // rc area
+    { "Sacred Forest Meadow", "神圣森林草甸" },  // rc area
+    { "Hyrule Field", "海拉鲁平原" },  // rc area
+    { "Lake Hylia", "海利亚湖" },  // rc area
+    { "Gerudo Valley", "格尔迪河谷" },  // rc area
+    { "Gerudo Fortress", "格尔迪要塞" },  // rc area
+    { "Haunted Wasteland", "闹鬼荒地" },  // rc area
+    { "Desert Colossus", "沙漠巨像" },  // rc area
+    { "Hyrule Market", "海拉鲁市场" },  // rc area
+    { "Hyrule Castle", "海拉鲁城堡" },  // rc area
+    { "Kakariko Village", "卡卡利科村" },  // rc area
+    { "Graveyard", "墓地" },  // rc area
+    { "Death Mountain Trail", "死亡山道" },  // rc area
+    { "Goron City", "格雷城" },  // rc area
+    { "Death Mountain Crater", "死亡山火口" },  // rc area
+    { "Zora's River", "卓拉河" },  // rc area
+    { "Zora's Domain", "卓拉领地" },  // rc area
+    { "Zora's Fountain", "卓拉泉" },  // rc area
+    { "Lon Lon Ranch", "隆隆牧场" },  // rc area
+    { "Deku Tree", "德库树" },  // rc area
+    { "Dodongo's Cavern", "多东哥洞窟" },  // rc area
+    { "Jabu Jabu's Belly", "贾布贾布的肚子" },  // rc area
+    { "Forest Temple", "森林神殿" },  // rc area
+    { "Fire Temple", "火之神殿" },  // rc area
+    { "Water Temple", "水之神殿" },  // rc area
+    { "Spirit Temple", "灵魂神殿" },  // rc area
+    { "Shadow Temple", "阴影神殿" },  // rc area
+    { "Bottom of the Well", "井底" },  // rc area
+    { "Ice Cavern", "冰之洞窟" },  // rc area
+    { "Gerudo Training Ground", "格尔迪训练场" },  // rc area
+    { "Ganon's Castle", "盖侬城堡" },  // rc area
 };
 
 const char* L(const char* english) {

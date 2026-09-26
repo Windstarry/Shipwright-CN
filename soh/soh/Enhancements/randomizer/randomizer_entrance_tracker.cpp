@@ -1019,7 +1019,7 @@ void EntranceTrackerWindow::DrawElement() {
                         bool showOverride = (!destToggle ? showTo : showFrom) || isDiscovered;
                         bool showOriginal = (!destToggle ? showFrom : showTo) || isDiscovered;
 
-                        const char* unknown = "???";
+                        const char* unknown = SohGui::L("???");
 
                         const char* origSrcName = showOriginal ? original->source.c_str() : unknown;
                         const char* rplcDstName = showOverride ? override->destination.c_str() : unknown;
